@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="@dimen/dialog_min_width"
+    android:minHeight="@dimen/dialog_min_height"
+    android:tag="LOL">
+
+    <Button
+        android:id="@+id/browse_file_button"
+        android:layout_width="159dp"
+        android:layout_height="61dp"
+        android:background="@drawable/browse_background"
+        android:gravity="center"
+        android:paddingStart="20dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="30dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/encodePasswordLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/browse_file_button">
+
+        <EditText
+            android:id="@+id/text_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="@dimen/dialog_decode_text_padding"
+            android:scrollbars="vertical"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="@dimen/secret_text_size" />
+    </ScrollView>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/encodePasswordLayout"
+        android:layout_width="0dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="80dp"
+        android:paddingLeft="12sp"
+        android:paddingTop="12sp"
+        android:paddingRight="12sp"
+        android:textColorHint="@color/colorButtonPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/colorButtonBackground">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/password_encode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/password_border"
+            android:backgroundTint="@color/colorButtonText"
+            android:focusedByDefault="false"
+            android:hint="@string/password_edit_text_hint"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHighlight="@android:color/darker_gray"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColorLink="@android:color/darker_gray" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <RadioButton
+        android:id="@+id/none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorButtonBackground"
+        android:checked="true"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/none"
+        android:textColor="@color/textColorPrimary"
+        android:textColorHint="@color/colorButtonBackground"
+        android:textColorLink="@color/colorButtonBackground"
+        android:textCursorDrawable="@color/colorButtonBackground"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lzw"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <RadioButton
+        android:id="@+id/lzw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorButtonBackground"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/lzw"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/none"
+        app:layout_constraintTop_toBottomOf="@+id/encodePasswordLayout" />
+
+    <RadioButton
+        android:id="@+id/arithmetic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/colorButtonBackground"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/arithmetic"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/lzw"
+        app:layout_constraintTop_toBottomOf="@+id/encodePasswordLayout" />
+
+    <RadioButton
+        android:id="@+id/huffman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:buttonTint="@color/colorButtonBackground"
+        android:onClick="onRadioButtonClicked"
+        android:text="@string/huffman"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textColorPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/arithmetic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/arithmetic" />
+
+
+    <Button
+        android:id="@+id/cancel_button"
+        style="?android:attr/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/cancel_background"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/ok_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/none" />
+
+    <Button
+        android:id="@+id/ok_button"
+        style="?android:attr/buttonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/stegit_background"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancel_button"
+        app:layout_constraintTop_toBottomOf="@+id/huffman" />
+
+
+</android.support.constraint.ConstraintLayout>

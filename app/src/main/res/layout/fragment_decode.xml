@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/decpage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:isScrollContainer="true"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:scrollbarSize="10sp"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/imagedec_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@android:color/transparent"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/load_image_layout_margin_top">
+
+                <ImageView
+                    android:id="@+id/loadDecodeImage"
+                    android:layout_width="402dp"
+                    android:layout_height="200dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/description_upload_image"
+                    android:cropToPadding="true"
+                    android:gravity="center"
+                    android:paddingTop="2sp"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/imageTextDecodeMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="bottom|center"
+                    android:drawableStart="@android:drawable/ic_menu_gallery"
+                    android:gravity="center"
+                    android:text="@string/description_upload_image"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dialogColor"
+                    android:textSize="@dimen/text_load_image_size" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/password_dec_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/decodePasswordLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12sp"
+                    android:layout_marginTop="12sp"
+                    android:layout_marginRight="12sp"
+                    android:textColorHint="@color/colorButtonBackground"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorButtonBackground">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/passwordToDecode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/password_border"
+                        android:hint="@string/password_to_decode_hint"
+
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/colorButtonText"
+                        android:textColorHighlight="@color/colorButtonBackground"
+                        android:textColorHint="@color/colorButtonBackground"
+                        android:textColorLink="@color/colorButtonBackground" />
+                </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:id="@+id/decompressions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/noneDec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/colorButtonBackground"
+                        android:checked="true"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/none"
+                        android:textColor="@color/textColorPrimary"
+                        android:textStyle="bold" />
+
+
+                    <RadioButton
+                        android:id="@+id/lzwDec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/colorButtonBackground"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/lzw"
+                        android:textColor="@color/textColorPrimary"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/arithmeticDec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:buttonTint="@color/colorButtonBackground"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/arithmetic"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/textColorPrimary"
+                        android:textStyle="bold" />
+
+
+                    <RadioButton
+                        android:id="@+id/huffmanDec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorButtonBackground"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="@string/huffman"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/textColorPrimary"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/decodeButton"
+                    android:layout_width="@dimen/load_image_decode"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/decode_background"
+                    android:paddingStart="0dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="25dp"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/defaultTextColor"
+                    android:textColorLink="@color/colorButtonText"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/receiveButton"
+                    android:layout_width="@dimen/load_image_decode"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/receive_background"
+                    android:paddingStart="0dp"
+                    android:paddingTop="15dp"
+                    android:paddingEnd="0dp"
+                    android:paddingBottom="25dp"
+                    android:textAlignment="inherit"
+                    android:textColor="@color/defaultTextColor"
+                    android:textColorLink="@color/colorButtonText"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <dimen name="activity_horizontal_margin">16sp</dimen>
+    <dimen name="activity_vertical_margin">16sp</dimen>
+    <dimen name="tab_max_width">264sp</dimen>
+    <dimen name="tab_padding_bottom">16sp</dimen>
+    <dimen name="tab_label">16sp</dimen>
+    <dimen name="custom_tab_layout_height">72sp</dimen>
+
+    <dimen name="nav_header_vertical_padding">20sp</dimen>
+    <dimen name="nav_header_left_padding">28sp</dimen>
+    <dimen name="nav_header_right_padding">10sp</dimen>
+    <dimen name="nav_header_height">150sp</dimen>
+
+    <dimen name="profile_width">116sp</dimen>
+    <dimen name="profile_height">116sp</dimen>
+
+    <dimen name="load_image_layout_margin_top">1sp</dimen>
+    <dimen name="nav_header_margin_start">26sp</dimen>
+    <dimen name="load_image_encode">200sp</dimen>
+    <dimen name="load_image_decode">200sp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+    <dimen name="secret_text_size">18sp</dimen>
+    <dimen name="dialog_min_height">400sp</dimen>
+    <dimen name="dialog_min_width">360sp</dimen>
+    <dimen name="dialog_decode_title_padding">6sp</dimen>
+    <dimen name="dialog_decode_text_padding">6sp</dimen>
+    <dimen name="text_load_image_size">18sp</dimen>
+</resources>

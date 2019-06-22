@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Stegfy</string>
+    <string name="action_settings">Settings</string>
+    <string name="encode">Encode</string>
+    <string name="decode">Decode</string>
+    <string name="send">Send</string>
+    <string name="none">Nothing\u0020\u0020</string>
+    <string name="lzw">LZW\u0020\u0020</string>
+    <string name="arithmetic">Arithmetic\u0020\u0020</string>
+    <string name="huffman">Huffman\u0020\u0020</string>
+    <string name="about_description">This app was developed as a project of the Information Theory exam, at the University of Calabria (Unical). It encode a text into an image, writing the text bits code into the LSB of RGB channels of the image. Using this method doesn\'t cause quality degradation to the original image, unless the text is very long (in terms of byte). This app also applies cryptography algoritm to protect the message with password (optional). Optionally, the original text can be compressed, using many algoritms implemented, for example Huffman code, LZW, Arithmetic code, and others.</string>
+    <string name="about_compression">The encoded image can be send to other devices with Stegfy installed.</string>
+    <string name="about_developer">Developed in 2019 by Cataldo Cianciaruso and Francesco Vaiti</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <string name="nav_home">Home</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_about_us">About Us</string>
+
+    <string-array name="nav_item_activity_titles">
+        <item></item> <!-- Home -->
+        <item>Settings</item>
+    </string-array>
+
+    <string name="title_activity_about_us">About us</string>
+
+    <string name="description_upload_image">Tap here to select an image</string>
+    <string name="password_edit_text_hint">Optional password, minimum 8 characters</string>
+    <string name="password_to_decode_hint">Enter password to get secret text</string>
+    <string name="enter_text">Enter Text</string>
+
+    <string name="runtime_permissions_txt">Please enable ALL permissions from app settings</string>
+    <string name="app_logo_content_description">Image for app logo</string>
+    <string name="edit_text_encode_hint">Enter message to encode here</string>
+    <string name="encode_text_preview">Text preview.</string>
+    <string name="btn_browse">\u0020\u0020</string>
+    <string name="cancel_button_text">CANCEL</string>
+    <string name="ok_button_text">OK</string>
+    <string name="close_button_text">CLOSE</string>
+    <string name="copy_button_text">COPY</string>
+    <string name="send_button_text">SEND</string>
+    <string name="error">Failed!</string>
+
+    <string name="error_no_text">Please enter text to encode</string>
+    <string name="error_no_image">Please select image</string>
+    <string name="error_fail_message">Failed!</string>
+    <string name="message_encoding_success">Encoding completed</string>
+    <string name="message_decoding_success">Decoding completed</string>
+    <string name="error_encoding_failed">Encoding failed</string>
+    <string name="error_decoding_failed">Decoding failed</string>
+    <string name="message_image_selected">Image selected</string>
+    <string name="decoded_text">Decoded Text</string>
+    <string name="error_no_encoded_text">No text encoded to this image</string>
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="nothing_to_copy">Nothing to copy</string>
+    <string name="msg_install_file_manager">Please install a File Manager</string>
+
+
+    <string name="prefs_category_hashing">Password Hashing</string>
+    <string name="list_prefs_summ_hashing">Choose hashing algorithm to protect password</string>
+    <string name="list_prefs_title_hashing">Choose Hashing algorithm</string>
+    <string name="list_prefs_key_hashing">hashing_algo</string>
+    <string name="list_prefs_default_hashing">SHA-1</string>
+    <string name="prefs_category_encryption">Text Encryption</string>
+    <string name="list_prefs_summ_encryption">Choose encryption algorithm to encrypt message</string>
+    <string name="list_prefs_title_encryption">Choose Encryption algorithm</string>
+    <string name="list_prefs_key_encryption">encryption_algo</string>
+    <string name="list_prefs_default_encryption">AES</string>
+
+    <string name="list_prefs_summ_animations">Enable for better user experience, disable to save battery power</string>
+    <string name="list_prefs_animations">animation_pref</string>
+
+
+    <string name="ok_string">OK</string>
+    <string name="enable_p2p_button">P2P On/Off</string>
+    <string name="discover_peers_button">Discover</string>
+    <string name="connect_peer_button">Connect</string>
+    <string name="disconnect_peer_button">Disconnect</string>
+    <string name="get_file_button">Send video</string>
+    <string name="empty"></string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="send_choice">Send with..</string>
+    <string name="receive">Receive</string>
+    <string name="client_text">This device will act as a client. Click on Gallery button to pick a local(stored) file</string>
+    <string name="empty_message">No devices found. Turn on P2P and perform discovery from the Action Bar</string>
+    <string name="p2p_off_warning">Enable P2P from action bar button above or system settings</string>
+    <string name="group_owner_text">"Am I the Group Owner? "</string>
+    <string name="label_me">ME</string>
+    <string name="label_peers">PEERS</string>
+</resources>

@@ -1,0 +1,84 @@
+<resources>
+
+  <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+  </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTabIndicatorLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">3sp</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+    	<item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+    <style name="EmptyTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:textColorPrimary">@color/colorButtonText</item>
+        <item name="android:textColorTertiary">@color/colorButtonText</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:headerDividersEnabled">true</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="SettingDialogStyle" parent="AlertDialog.AppCompat">
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:popupBackground">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:itemBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="TabStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:textColorPrimary">@color/colorButtonText</item>
+        <item name="android:textColorTertiary">@color/colorButtonText</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="SettingsFragmentStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColorPrimary">@color/colorButtonText</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:windowBackground">@drawable/main_background</item>
+        <item name="android:windowActionBar">true</item>
+        <item name="android:dialogTheme">@style/SettingDialogStyle</item>
+        <item name="alertDialogTheme">@style/SettingDialogStyle</item>
+    </style>
+
+    <style name="MainStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/main_background</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
